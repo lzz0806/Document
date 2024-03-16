@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Docsify-Guide</title>
+    <title>目录</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport"
@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <!-- 默认主题 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-    
     <style>
       nav.app-nav li ul {
         min-width: 100px;
@@ -36,9 +35,9 @@
     <script>
         window.$docsify = {
             // 项目名称
-            name: 'Docsify-Guide',
+            name: '目录',
             // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-            repo: 'https://github.com/YSGStudyHards',
+            repo: 'https://github.com/lzz0806/Document',
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: true,
             // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
@@ -64,8 +63,12 @@
                 noData: '找不到结果',
                 depth: 4,
                 hideOtherSidebarContent: false,
-                namespace: 'Docsify-Guide',
-            }
+                namespace: '目录',
+            },
+            latex: {
+              inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
+              displayMath  : [['$$', '$$']],               // defaul
+            },
         }
     </script>
     <!-- docsify的js依赖 -->
@@ -78,6 +81,11 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
     <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <!-- LaTeX display engine -->
+    <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!--  docsify-latex plugin -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
 </body>
 
 </html>
