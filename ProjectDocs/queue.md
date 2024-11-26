@@ -1,4 +1,8 @@
-## 队列
+# 队列
+
+## 队列性质
+
+
 ```python
 from queue import Queue
 ```
