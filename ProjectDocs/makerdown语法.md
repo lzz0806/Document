@@ -12,8 +12,9 @@ $\begin{bmatrix}
 1 & 1 & \cdots & 1 \\
 \vdots & \vdots & \ddots & \vdots \\
 1 & 1 & \cdots & 1 \\
-\end{bmatrix} 
-\begin{pmatrix}
+\end{bmatrix}$
+
+$\begin{pmatrix}
 1 & 1 & \cdots & 1 \\
 1 & 1 & \cdots & 1 \\
 \vdots & \vdots & \ddots & \vdots \\
