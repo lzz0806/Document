@@ -1,45 +1,89 @@
 # Markdown语法记录
 
-```basic
-> test
-```
-> test
 ## 公式
-居中
-$$e=mc^2$$
-同一行
-$e=mc^2$
-
-$y=\frac{x}{y}$
-
+### 分数
+$\frac{x}{y}$
+```bash
+\frac{x}{y}
+```
+### 矩阵
 $\begin{bmatrix}
 1 & 1 & \cdots & 1 \\
 1 & 1 & \cdots & 1 \\
 \vdots & \vdots & \ddots & \vdots \\
 1 & 1 & \cdots & 1 \\
-\end{bmatrix}$
-
-$\begin{pmatrix}
+\end{bmatrix} 
+\begin{pmatrix}
 1 & 1 & \cdots & 1 \\
 1 & 1 & \cdots & 1 \\
 \vdots & \vdots & \ddots & \vdots \\
 1 & 1 & \cdots & 1 \\
 \end{pmatrix}$
+```bash
+\begin{bmatrix}
+1 & 1 & \cdots & 1 \\
+1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots \\
+1 & 1 & \cdots & 1 \\
+\end{bmatrix}
 
-$$
+\begin{pmatrix}
+1 & 1 & \cdots & 1 \\
+1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots \\
+1 & 1 & \cdots & 1 \\
+\end{pmatrix}
+```
+### 方程
+$\begin{cases}
+x=\rho\cos\theta \\
+y=\rho\sin\theta \\
+\end{cases}$
+```bash
 \begin{cases}
 x=\rho\cos\theta \\
 y=\rho\sin\theta \\
 \end{cases}
-$$
-开平方 $\sqrt{2}$
+```
 
-累加 $\sum_{k=1}^n\frac{1}{k}  \quad  \displaystyle\sum_{k=1}^n\frac{1}{k}$
+### 开平方
+```bash
+\sqrt{2}
+```
+$\sqrt{2}$
 
-累乘 $\prod_{k=1}^n\frac{1}{k}  \quad  \displaystyle\prod_{k=1}^n\frac{1}{k}$
+### 累加 
+$\sum_{k=1}^n\frac{1}{k}$
 
-积分 $\displaystyle \int_0^1x{\rm d}x  \quad  \iint_{D_{xy}}  \quad  \iiint_{\Omega_{xyz}}$
+$\displaystyle\sum_{k=1}^n\frac{1}{k}$
+```bash
+\sum_{k=1}^n\frac{1}{k}  
+\displaystyle\sum_{k=1}^n\frac{1}{k}
+```
 
+### 累乘 
+$\prod_{k=1}^n\frac{1}{k}$
+
+$\displaystyle\prod_{k=1}^n\frac{1}{k}$
+```bash
+\prod_{k=1}^n\frac{1}{k}
+\displaystyle\prod_{k=1}^n\frac{1}{k}
+```
+
+### 积分 
+$\displaystyle \int_0^1x{\rm d}x$
+
+$\iint_{D_{xy}}$
+
+$\iiint_{\Omega_{xyz}}$
+
+```bash
+\displaystyle \int_0^1x{\rm d}x
+\iint_{D_{xy}}
+\iiint_{\Omega_{xyz}}
+```
+
+## 符号表
 ![Alt text](/images/latex.png)
 
 
