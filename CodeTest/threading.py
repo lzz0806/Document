@@ -38,8 +38,25 @@ class BinaryTree:
         return self.res
 
     def level_order_2(self, root: TreeNode):
-        # 层序遍历
-        pass
+        # 层序遍历,记录每一层的值
+        if not root:
+            return []
+        queue = [root]
+        while queue:
+            # 前处理，可以定义列表作为记录每一层值的变量
+            tmp = []
+            n = len(queue)
+            for i in range(n):
+                node = queue.pop(0)
+                tmp.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            # 后续处理，例如可以将一层的值加入新列表，也可以记录当前层的高度
+            self.res.append(tmp)
+        return self.res
+
 
 
 if __name__ == '__main__':
@@ -51,4 +68,5 @@ if __name__ == '__main__':
     tree.right.left = TreeNode(22)
     tree.right.right = TreeNode(35)
     binary_tree = BinaryTree()
-    print(binary_tree.level_order_1(tree))
+    # print(binary_tree.level_order_1(tree))
+    print(binary_tree.level_order_2(tree))

@@ -75,3 +75,31 @@ docker load < xxx.tar
 
 ## 用法案例
 
+### docker非root用户不用sudo执行docker命令
+
+1. 创建名为docker的组，如果之前已经有该组就会报错，可以忽略这个错误：
+```shell
+sudo groupadd docker
+```
+
+2. 将当前用户加入组docker：
+```bash
+sudo gpasswd -a [user_name] docker
+```
+
+3. 重启docker服务(生产环境请慎用)：
+```bash
+sudo systemctl restart docker
+```
+
+4. 添加访问和执行权限：
+```shell
+sudo chmod a+rw /var/run/docker.sock
+```
+
+5. 操作完毕，验证一下，现在可以不用带sudo了：
+
+### 
+1. [Ubuntu安装完docker引擎后，在创建容器的时候指定 --gpus all，出现报错如下](https://www.cnblogs.com/booturbo/p/16318627.html)
+2. [docker mount](https://zhuanlan.zhihu.com/p/667272282)
+3. [docker镜像源](https://blog.csdn.net/llc580231/article/details/139979603)

@@ -1,29 +1,23 @@
 # Conda
 
 ## 基础命令
-
-### 创建环境
-```
+```bash
+1. 创建环境
 conda create -n [env_name] python=3.9
-```
-
-### 进入环境
-```
+2. 进入环境
+conda create -n [env_name] python=3.9
+3. 激活环境
 conda activate [env_name]
-```
-
-### 删除环境
-```
+4. 删除环境
 conda detictive [env_name]
-```
-
-### 临时换源
-```
+5. pip 临时换源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple [package_name]
-```
-
-### 永久换源
-```
+6. 永久换源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+7. 查看 conda config
+conda config --show
+8. 设置 conda config
+conda config --set auto_activate_base True
+9. 打包 conda 环境
+conda-pack -n isaaclab -o isaaclab.tar.gz
 ```
-
