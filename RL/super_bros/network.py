@@ -1,11 +1,10 @@
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 
-class PPO(nn.Module):
+class PPOAgent(nn.Module):
     def __init__(self, num_inputs, num_actions):
-        super(PPO, self).__init__()
+        super(PPOAgent, self).__init__()
         self.conv1 = nn.Conv2d(num_inputs, 32, 3, stride=2, padding=1)
         self.conv2 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
         self.conv3 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
@@ -28,9 +27,7 @@ class PPO(nn.Module):
         x = F.relu(self.conv2(x))
         x = F.relu(self.conv3(x))
         x = F.relu(self.conv4(x))
-        print(x.shape)
         x = self.linear(x.view(x.size(0), -1))
-        return self.actor_linear(x), self.critic_linear(x)
-
-tensor1 = torch.randn(256, 240, 3)
-ppo = PPO(256, 240)
+        actor = self.actor_linear(x)
+        critic = self.critic_linear(x)
+        return actor, critic
