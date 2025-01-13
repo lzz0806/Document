@@ -16,3 +16,10 @@
 # 5.找到“quiet splash”，改为 “quiet splash nomodeset”，保存退出
 # 6.先 sudo update-grub 再执行 reboot 重启电脑
 ```
+
+### 代理错误 proxy URL
+```bash
+# 1.检查环境变量：printenv | grep -i proxy
+# 2.关掉所有proxy：unset all proxy
+
+```
