@@ -9,7 +9,7 @@ conda create -n [env_name] python=3.9
 3. 激活环境
 conda activate [env_name]
 4. 删除环境
-conda detictive [env_name]
+conda remove -n [env_name] --all
 5. pip 临时换源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple [package_name]
 6. 永久换源
